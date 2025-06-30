@@ -97,7 +97,6 @@ This project is created for the **Mobile Computing 2** course. It includes learn
 2. Open the file ApiConfig.kt, then update the base URL to match your backend server address:
    ```
    private const val BASE_URL = "http://172.16.7.133:3000/api/"
-   
   Replace `172.16.7.133` with your actual IP address. If you are using an Android emulator, use `10.0.2.2` instead of localhost.
 3. Make sure all required SDKs and Gradle dependencies are installed.
 4. Build and run the project on an emulator or a physical Android device.
