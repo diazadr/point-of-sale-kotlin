@@ -1,6 +1,12 @@
-# Point of Sale
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f4437b4c-f7ea-47f0-8ee2-605127b27aa4" alt="himamobanner" width="600">
+</p>
 
-![Project Status](https://img.shields.io/badge/status-completed-brightgreen)
+<p align="center">
+  <img src="https://img.shields.io/badge/status-completed-brightgreen"> <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue"></a>
+</p>
+
+# Point of Sale
 
 This project is created for the **Mobile Computing 2** course. It includes learning materials about **Kotlin in Android Studio** and **Express JS**, focusing on fundamental concepts such as **CRUD API**, **authentication**, and **role-based access control**.
 
