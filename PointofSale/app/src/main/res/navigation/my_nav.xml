@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.pointofsale.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_customerFragment"
+            app:destination="@id/customerFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_supplierFragment"
+            app:destination="@id/supplierFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_saleFragment"
+            app:destination="@id/saleFragment" />
+
+        <action
+            android:id="@+id/action_saleFragment_to_saleDetailFragment"
+            app:destination="@id/saleDetailFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_purchaseFragment"
+            app:destination="@id/purchaseFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_salesReportFragment"
+            app:destination="@id/salesReportFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_salesSummaryFragment"
+            app:destination="@id/salesSummaryFragment" />
+
+        <action
+            android:id="@+id/action_purchaseFragment_to_purchaseDetailFragment"
+            app:destination="@id/purchaseDetailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.pointofsale.ui.product.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product">
+
+        <action
+            android:id="@+id/action_productFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+
+        <action
+            android:id="@+id/action_productFragment_to_formProductFragment"
+            app:destination="@id/formProductFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formProductFragment"
+        android:name="com.example.pointofsale.ui.product.FormProductFragment"
+        android:label="fragment_form_product"
+        tools:layout="@layout/fragment_form_product">
+
+        <argument
+            android:name="data"
+            app:argType="com.example.pointofsale.data.model.Product"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_formProductFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.pointofsale.ui.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category">
+
+        <action
+            android:id="@+id/action_categoryFragment_to_formCategoryFragment"
+            app:destination="@id/formCategoryFragment" />
+
+        <action
+            android:id="@+id/action_categoryFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formCategoryFragment"
+        android:name="com.example.pointofsale.ui.category.FormCategoryFragment"
+        android:label="fragment_form_category"
+        tools:layout="@layout/fragment_form_category">
+
+        <argument
+            android:name="data"
+            app:argType="com.example.pointofsale.data.model.Category"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_formCategoryFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.pointofsale.ui.user.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user">
+
+        <action
+            android:id="@+id/action_userFragment_to_formUserFragment"
+            app:destination="@id/formUserFragment" />
+
+        <action
+            android:id="@+id/action_userFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formUserFragment"
+        android:name="com.example.pointofsale.ui.user.FormUserFragment"
+        android:label="fragment_form_user"
+        tools:layout="@layout/fragment_form_user">
+
+        <argument
+            android:name="data"
+            app:argType="com.example.pointofsale.data.model.User"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_formUserFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerFragment"
+        android:name="com.example.pointofsale.ui.customer.CustomerFragment"
+        android:label="Customers"
+        tools:layout="@layout/fragment_customer">
+
+        <action
+            android:id="@+id/action_customerFragment_to_formCustomerFragment"
+            app:destination="@id/formCustomerFragment" />
+
+        <action
+            android:id="@+id/action_customerFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formCustomerFragment"
+        android:name="com.example.pointofsale.ui.customer.FormCustomerFragment"
+        android:label="Customer Form"
+        tools:layout="@layout/fragment_form_customer">
+
+        <argument
+            android:name="data"
+            app:argType="com.example.pointofsale.data.model.Customer"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_formCustomerFragment_to_customerFragment"
+            app:destination="@id/customerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/supplierFragment"
+        android:name="com.example.pointofsale.ui.supplier.SupplierFragment"
+        android:label="Suppliers"
+        tools:layout="@layout/fragment_supplier">
+
+        <action
+            android:id="@+id/action_supplierFragment_to_formSupplierFragment"
+            app:destination="@id/formSupplierFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formSupplierFragment"
+        android:name="com.example.pointofsale.ui.supplier.FormSupplierFragment"
+        android:label="Supplier Form"
+        tools:layout="@layout/fragment_form_supplier">
+
+        <argument
+            android:name="data"
+            app:argType="com.example.pointofsale.data.model.Supplier"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_formSupplierFragment_to_supplierFragment"
+            app:destination="@id/supplierFragment" />
+    </fragment>
+
+    <!-- SALE SECTION -->
+    <fragment
+        android:id="@+id/saleFragment"
+        android:name="com.example.pointofsale.ui.sale.SaleFragment"
+        android:label="Sales"
+        tools:layout="@layout/fragment_sale">
+
+        <action
+            android:id="@+id/action_saleFragment_to_saleDetailFragment"
+            app:destination="@id/saleDetailFragment" />
+
+        <action
+            android:id="@+id/action_saleFragment_to_formSaleFragment"
+            app:destination="@id/formSaleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/saleDetailFragment"
+        android:name="com.example.pointofsale.ui.sale.SaleDetailFragment"
+        android:label="Sale Details"
+        tools:layout="@layout/fragment_sale_detail">
+
+        <argument
+            android:name="transactionId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formSaleFragment"
+        android:name="com.example.pointofsale.ui.sale.FormSaleFragment"
+        android:label="New Sale"
+        tools:layout="@layout/fragment_form_sale">
+
+        <action
+            android:id="@+id/action_formSaleFragment_to_productSelectionFragment"
+            app:destination="@id/productSelectionFragment" />
+    </fragment>
+
+    <!-- PURCHASE SECTION -->
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.example.pointofsale.ui.purchase.PurchaseFragment"
+        android:label="Purchase"
+        tools:layout="@layout/fragment_purchase">
+
+        <action
+            android:id="@+id/action_purchaseFragment_to_purchaseDetailFragment"
+            app:destination="@id/purchaseDetailFragment">
+            <argument
+                android:name="purchaseId"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_purchaseFragment_to_formPurchaseFragment"
+            app:destination="@id/formPurchaseFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/purchaseDetailFragment"
+        android:name="com.example.pointofsale.ui.purchase.PurchaseDetailFragment"
+        android:label="Purchase Details"
+        tools:layout="@layout/fragment_purchase_detail">
+
+        <argument
+            android:name="purchaseId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/formPurchaseFragment"
+        android:name="com.example.pointofsale.ui.purchase.FormPurchaseFragment"
+        android:label="New Purchase"
+        tools:layout="@layout/fragment_form_purchase">
+
+        <action
+            android:id="@+id/action_formPurchaseFragment_to_productSelectionFragment"
+            app:destination="@id/productSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productSelectionFragment"
+        android:name="com.example.pointofsale.ui.sale.ProductSelectionFragment"
+        android:label="Pilih Produk"
+        tools:layout="@layout/fragment_product_selection">
+
+        <action
+            android:id="@+id/action_productSelectionFragment_to_formSaleFragment"
+            app:destination="@id/formSaleFragment"
+            app:popUpTo="@id/productSelectionFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_productSelectionFragment_to_formPurchaseFragment"
+            app:destination="@id/formPurchaseFragment"
+            app:popUpTo="@id/productSelectionFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/salesReportFragment"
+        android:name="com.example.pointofsale.ui.salesreport.SalesReportFragment"
+        android:label="Sales Report"
+        tools:layout="@layout/fragment_sales_report">
+    <action
+        android:id="@+id/action_dashboardFragment_to_salesReportFragment"
+        app:destination="@id/salesReportFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/salesSummaryFragment"
+        android:name="com.example.pointofsale.ui.salesreport.SalesSummaryFragment"
+        android:label="Laporan Ringkasan Penjualan"
+        tools:layout="@layout/fragment_sales_summary" />
+
+</navigation>

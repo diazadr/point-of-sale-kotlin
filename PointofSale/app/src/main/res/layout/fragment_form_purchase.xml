@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.purchase.FormPurchaseFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtSupplierId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Supplier ID"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Product"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/txtSelectedProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No products selected"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnSavePurchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Purchase"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
