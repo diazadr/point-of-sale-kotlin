@@ -86,13 +86,9 @@ This project is created for the **Mobile Computing 2** course. It includes learn
    JWT_EXPIRES_IN=1d
   Adjust the database credentials based on your local MySQL configuration.
 
-3. Install the required backend dependencies:
-   ```
-   npm install
+3. Install the required backend dependencies: `npm install`
 
-4. Start the backend server:
-   ```
-   npm run start
+4. Start the backend server: `npm run start`
 
   The backend server will run at http://localhost:3000/api/. If accessing from an Android emulator or physical device, replace localhost with your local IP address.
 
@@ -102,7 +98,7 @@ This project is created for the **Mobile Computing 2** course. It includes learn
    ```
    private const val BASE_URL = "http://172.16.7.133:3000/api/"
    
-  Replace 172.16.7.133 with your actual IP address. If you are using an Android emulator, use 10.0.2.2 instead of localhost.
+  Replace `172.16.7.133` with your actual IP address. If you are using an Android emulator, use `10.0.2.2` instead of localhost.
 3. Make sure all required SDKs and Gradle dependencies are installed.
 4. Build and run the project on an emulator or a physical Android device.
 5. APK files are also provided in the repository for direct installation if needed.
